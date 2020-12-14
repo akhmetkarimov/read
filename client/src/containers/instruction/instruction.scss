@@ -1,0 +1,19 @@
+.inst-img {
+    width: 100%;
+    img {
+        width: 50%;
+        margin: 10px 0;
+    }
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.instruction-inner {
+    p, b {
+        color: #000000;
+        margin: 5px 0;       
+    }
+    h2 {
+        text-align: center;
+    }
+} 

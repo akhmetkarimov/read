@@ -1,0 +1,126 @@
+@import '../../style/_colors';
+@import '../../style/_common';
+
+.filter {
+    height: 150px;
+    display: none;
+    background-color: $primary;
+    padding: 30px;
+    animation: transitionBlock .2s;
+    form {
+        @include flexbox(space-between, flex-start, row, wrap);
+        animation: transitionForm .4s;
+    }
+    .ant-form-item {
+        width: calc(25% - 20px);
+        margin: 10px;
+        height: 32px;
+        div {
+            width: 100%;
+            height: 100%;
+        }
+        input {
+            width: 100%;
+            height: 100%;
+        }
+    }
+    
+}
+.filter .ant-select-selector {
+    // height: 40px!important;
+    width: 300px;
+}
+
+.filter-active {
+    display: block;
+}
+
+.ant-select-selection-placeholder {
+    @include flexbox(flex-start, center);
+}
+.filter-button {
+    @include flexbox(center, flex-start);
+    button {    
+        width: 300px;
+        height: 40px;
+        background-color: $red;
+        border: none;
+        color: $white;
+    }
+}
+
+@keyframes transitionBlock {
+    from {
+        height: 0px;
+    }
+    to {
+        height: 150px;
+    }
+}
+@keyframes transitionForm {
+    from {
+        display: none;
+    }
+    to {
+        display: block;
+    }
+}
+@keyframes transitionBlockMedia {
+    0% {
+        height: 0px;
+    }
+    100% {
+        height: 300px;
+    }
+}
+
+
+@media screen and (max-width: 576px) {
+    .filter .ant-select-selector {
+        height: 32px!important;
+        width: 250px;
+    }
+    .filter-button button {
+        height: 40px;
+        width: 300px;
+    }
+    .filter  {
+        animation-name: transitionBlockMedia;
+        animation-duration: .3s;
+        height: 300px;
+        padding: 10px;
+        .ant-form-item {
+            width: 100%;
+            margin: 10px;
+            height: 32px;
+            div {
+                width: 100%;
+                height: 100%;
+            }
+            input {
+                width: 100%;
+                height: 100%;
+            }
+        }
+        
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .filter  {
+        .ant-form-item {
+            width: 100%;
+            margin: 10px 0;
+            height: 30px;
+            div {
+                width: 100%;
+                height: 100%;
+            }
+            input {
+                width: 100%;
+                height: 100%;
+            }
+        }
+        
+    }
+}

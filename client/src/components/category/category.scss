@@ -1,0 +1,62 @@
+@import '../../style/_colors';
+@import '../../style/_common';
+
+.category {
+    padding-left: 20px;
+    box-shadow: 0px 4px 5px rgba(133, 133, 133, 0.25);
+    background-color: $greyBack; 
+    width: 100%;
+    height: 100%;
+}
+.ant-menu-inline, .ant-menu-vertical, .ant-menu-vertical-left {
+    border-right: none!important;
+}
+.menu-category{
+    width: 100%!important;
+}
+.ant-menu-item-selected {
+    color: #575757!important;
+}
+.ant-menu-inline .ant-menu-item::after {
+    border-right: none!important;
+}
+.category-header {
+    padding: {
+        top: 60px;
+        bottom: 10px;        
+    }
+    h2 {
+        margin-bottom: 0;
+    }
+    span, a {
+        padding-right: 20px;
+        color: $primary;
+        cursor: pointer;
+    }
+    @include flexbox(space-between, center);
+}
+.category-title {
+    color: $primary;
+}
+.ant-menu {
+    background-color: $greyBack!important;
+}
+.ant-menu-vertical .ant-menu-item, .ant-menu-vertical-left .ant-menu-item, .ant-menu-vertical-right .ant-menu-item, .ant-menu-inline .ant-menu-item, .ant-menu-vertical .ant-menu-submenu-title, .ant-menu-vertical-left .ant-menu-submenu-title, .ant-menu-vertical-right .ant-menu-submenu-title, .ant-menu-inline .ant-menu-submenu-title {
+    white-space: normal!important;
+    text-overflow: none!important;
+    overflow: visible!important;
+    
+}
+.ant-menu-vertical > .ant-menu-item, .ant-menu-vertical-left > .ant-menu-item, .ant-menu-vertical-right > .ant-menu-item, .ant-menu-inline > .ant-menu-item, .ant-menu-vertical > .ant-menu-submenu > .ant-menu-submenu-title, .ant-menu-vertical-left > .ant-menu-submenu > .ant-menu-submenu-title, .ant-menu-vertical-right > .ant-menu-submenu > .ant-menu-submenu-title, .ant-menu-inline > .ant-menu-submenu > .ant-menu-submenu-title{
+    height: 100%!important;
+    line-height: 24px!important;
+    padding-left: 0!important;
+}
+.ant-menu-sub.ant-menu-inline > .ant-menu-item, .ant-menu-sub.ant-menu-inline > .ant-menu-submenu > .ant-menu-submenu-title {
+    height: 100%!important;
+   
+   
+}
+.ant-menu:not(.ant-menu-horizontal) .ant-menu-item-selected {
+    background-color: $greyBack!important;
+}

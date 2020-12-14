@@ -1,0 +1,205 @@
+@import '../../style/_colors';
+@import '../../style/_common';
+
+// .showcase {
+//     margin-left: 30px;
+// }
+.showcase-inner {
+    @include flexbox(flex-start, flex-start, row, wrap);
+}
+.showcase-item-card {
+    position: relative;
+    width: calc(25% - 20px);
+    height: 440px;
+    margin: 30px 10px;
+    @include flexbox(flex-start, flex-start, column);
+    .rate-text {
+        color: $greyDark;
+        margin-bottom: 10px;
+    }
+    p.small-regular-text {
+        span {
+            padding-right: 10px;
+        }
+    }
+}
+.showcase-item-list {
+    width: 100%;
+    height: 250px;
+    background-color: $blue;;
+    margin: 30px 0;
+    @include flexbox(flex-start, flex-start);
+    .rate-text {
+        color: $greyDark;
+       
+    }
+    p.small-regular-text {
+        span {
+            padding-right: 10px;
+        }
+    }
+}
+.showcase-header {
+    padding-top: 60px;
+    @include flexbox(space-between, center);    
+    h2 {
+        margin-bottom: 0;
+    }
+    .view {
+        font-size: 24px;
+        color: $greyDark;
+        margin-left: 15px;
+        cursor: pointer;
+        &:hover {
+            color: $black;
+        }
+    }
+    .view-active {
+        color: $black;
+    }
+}
+.book-title-card {
+    max-width: 200px;
+    display: block;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    padding: 5px 0;
+    // height: 2*16*21px;
+    // -webkit-line-clamp: 2;
+    // -webkit-box-orient: vertical;
+}
+.showcase-list-top {
+    @include flexbox(flex-start, flex-start, column);
+}
+.favorite-img {
+    cursor: pointer;
+    margin-right: 10px;
+}
+.showcase-list-right {
+    @include flexbox(space-between, flex-start, column);
+    height: 100%;
+    padding: 20px;
+    width: 80%;
+}
+.showcase-img-list {
+    width: 20%;
+    height: 100%;
+    box-shadow: 5px 4px 5px rgba(85, 85, 85, 0.29);
+    img {
+        width: 100%;
+        height: 100%;
+        // object-fit: contain;    
+    }
+}
+.showcase-img-card {
+    width: 100%;
+    height: 300px;
+    box-shadow: 5px 4px 5px rgba(85, 85, 85, 0.29);
+    img {
+        width: 100%;
+        height: 100%;
+        // object-fit: contain;    
+    }
+}
+.showcase-footer {
+    @include flexbox(flex-start, center, row);
+    width: 100%;
+    span {
+        height: 30px;
+        svg {
+            height: 100%;
+        }
+    }
+    button {
+        width: 200px;
+        background-color: $red;
+        color: $white;
+        height: 30px; 
+        a {
+            width: 100%;
+        }
+    }
+}
+.pagination {
+    @include flexbox(center, flex-start);
+}
+@media screen and (max-width: 1024px) {
+    .showcase-item-card {
+        width: calc(33.3% - 20px);
+        height: 360px;
+        margin: 10px;  
+    }
+    .showcase-img-card {
+        height: 220px;
+    }
+    .showcase-list-right {
+        width: 70%;
+    }
+    .showcase-img-list {
+        width: 30%;
+    }
+    .book-title-card {
+        width: 150px;
+    }
+    .showcase {
+        margin-left: 0;
+    }
+}
+@media screen and (max-width: 576px) {
+    .showcase-img-list {
+        width: 35%;
+    }
+    .showcase {
+        margin-left: 0;
+    }
+    .showcase-list-right {  
+        padding: 10px;
+        width: 62%;
+    }
+    .showcase-img-list {
+        width: 38%;
+    }
+    .showcase-item-list {
+        height: 180px;
+    }
+    .showcase-item-card {
+        width: calc(50% - 20px);
+        height: 350px;
+        margin: 10px;   
+    }
+    .showcase {
+        margin-left: 0;
+        margin-top: 20px;
+    }
+    .showcase-img-card {
+        height: 220px;
+    }
+   .showcase-header {
+       padding-top: 0;
+   }
+   .book-title-card {
+       max-width: 150px;
+   }
+   .view {
+    font-size: 20px;
+}
+}
+
+@media screen and (max-width: 320px) {
+    .showcase-item-card {
+        width: 100%;
+        height: 400px;
+        margin: 10px 0;
+    }
+    .showcase-img-card {
+        height: 250px;
+        width: 70%;
+    }
+    .book-img {
+       
+    }
+    .book-title-card {
+        max-width: 280px;
+    }
+}

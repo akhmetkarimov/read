@@ -1,0 +1,91 @@
+@import '../../style/_colors';
+@import '../../style/_common';
+
+.search {
+    // padding: 35px 0;
+    // height: 60px;
+   
+    @include flexbox(flex-start, center);
+    .ant-btn-primary {
+        background-color: $white!important;
+        border: {
+            top: none;
+            left: none;
+            right: none;
+            bottom: 6px solid #003858;
+
+        }
+    }
+    .ant-input-affix-wrapper {
+        height: 70px;
+        
+        ::placeholder {
+            font-size: 24px;
+            font-weight: 500;
+            color: #828282;
+        }
+        @include flexbox(flex-start, center);
+        :hover {
+            border-color: none;
+            border-right-width: none;
+        }
+        border: {
+            top: none;
+            left: none;
+            right: none;
+            bottom: 4px solid #003858;
+
+        }
+    }
+    .ant-input-affix-wrapper-focused {
+        border-right-width: 0!important;
+        box-shadow: none;
+    } 
+    .ant-input {
+        height: 60px;
+        font-size: 24px;
+    }
+}
+.search-filter {
+    padding: 10px 0;
+}
+.search-img {
+    cursor: pointer;
+    @include flexbox(center, center);
+    height: 70px;
+    width: 60px;
+    border-bottom: 4px solid #003858;
+    .filter-icon {
+        width: 60px;
+        height: 100%;
+    }
+    .close-icon {
+        width: 30px;
+        height: 100%;
+    }
+}
+.anticon.anticon-search {
+    font-size: 24px;
+}
+
+@media screen and (max-width: 576px) {
+    .search {
+        .ant-input-affix-wrapper {
+            ::placeholder {
+                font-size: 20px;      
+            }
+        }
+        .anticon.anticon-search {
+            font-size: 18px;
+        }
+        .filter-icon {
+            width: 50px;
+            height: 100%;
+        }
+        .close-icon {
+            width: 20px;
+            height: 100%;
+        }
+    }
+    
+}

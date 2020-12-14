@@ -1,0 +1,68 @@
+@import '../../style/_colors';
+@import '../../style/_common';
+
+.profile-main{
+    @include flexbox(flex-start, center);
+}
+.profile-inner {
+    padding: 80px 0;
+    h2 {
+        margin-bottom: 20px;
+    }
+}
+.profile-info {
+   width: 80%;
+}
+
+.avatar {
+    width: 20%;
+}
+.profile-content {
+    padding: 20px 0;
+    @include flexbox(flex-start, center, column);
+    form {
+        width: 100%;       
+        div.ant-row {
+            @include flexbox(flex-start, flex-end, column);
+            div {
+                margin-left: 0;
+                max-width: 100%;
+                width: 80%;
+                text-align: left;
+                flex: 0 0 100%;
+                label {
+                    font-family: "Roboto Slab Regular";
+                    font-size: 16px;
+                }
+            }        
+            button {
+                background-color: $red;
+                border: none;
+                width: 100%;
+                height: 50px;
+                color: $white;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .profile-info {
+        width: 100%;
+    }
+    .profile-content form div.ant-row div {
+        width: 100%;
+    }
+    .avatar {
+        width: 0;
+    }
+    .profile-info {
+        text-align: left;
+        span {
+            font-size: 18px;
+        }
+        h4 {
+            font-size: 22px;
+        }
+    }
+}

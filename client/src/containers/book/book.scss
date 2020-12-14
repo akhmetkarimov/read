@@ -1,0 +1,227 @@
+@import '../../style/_colors';
+@import '../../style/_common';
+
+.container-book {
+    width: 68%;
+    margin: 0 auto;
+    max-width: 1440px;
+}
+.book-inner {
+    display: flex;
+    padding: {
+        top: 10px;
+        bottom: 30px;
+    };
+}
+.book-text {
+    color: $primary;
+    height: 40px;
+}
+.breadcrumb {
+    padding: 40px 0;
+    a {
+        color: $breadcrumb;
+    }
+    span {
+        color: $black;
+    }
+}
+.book-title {
+    // text-transform: capitalize;
+    
+}
+.book-content {
+    width: 60%;
+    margin-left: 20px;
+    a.link {
+        text-decoration: underline;
+       
+    }
+}
+.category-title {
+    padding-right: 10px;
+}
+.bookmark {
+    cursor: pointer;
+}
+.book-footer {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    div {
+        border: 1px solid $red;
+        padding: 14px 18px;
+        height: 50px;
+    }
+    button {
+        margin-left: 15px;
+        height: 50px;
+        padding: 0 100px;
+        background-color: $red;
+        color: $white;
+    }
+}
+.book-img {
+    width: 40%;
+    height: 100%;
+    margin-right: 60px;
+    @include flexbox(flex-start, center);
+    box-shadow: 5px 4px 5px rgba(85, 85, 85, 0.29);
+    img {
+       width: 100%;
+        max-height: 100%;
+        object-fit: contain;
+    }
+}
+.showcase-img-slide {
+    box-shadow: 5px 4px 5px rgba(85, 85, 85, 0.29);
+    img {
+        width: 100%;
+        height: 70%;
+    }
+}
+.recommendation {
+    padding: 20px 0;
+}
+ .slick-next, .slick-prev {
+   
+    &:before {
+        color: $greyDark;
+    }
+}
+.author-text {
+    color: $black;
+    padding-right: 10px;
+}
+.slick-list {
+    width: 100%;
+   
+}
+.book-info  {
+    margin: 10px 0;
+    display: flex;
+    div {
+        padding: 7px 0;
+    }
+    .book-info-left {
+        div {
+            @include flexbox (flex-start, flex-start, column);          
+        }
+        span {
+            text-align: left;
+            &:last-child {
+                color: $black;
+                margin-left: 10px;
+                span {
+                    color: $black;
+                    
+                }
+                
+            }
+        }
+        
+    }
+    .book-info-right {
+        div {
+            @include flexbox (flex-start, flex-start, column);
+        }
+        margin-left: 20px;
+        span {
+            text-align: left;
+            color: $black;
+        }
+    }
+}
+.slick-slide div {
+    margin-right: 9px;
+}
+.ant-rate-star div {
+    margin-right: 0;
+}
+.annotation {
+    padding: 20px 0;
+    h2 {
+        text-align: center;
+    }
+    p {
+        text-align: justify;
+    }
+}
+@media screen and (min-width: 1920px) {
+    .book-img {
+        width: 30%;
+    }
+    .book-content {
+        width: 70%;
+    }
+}
+@media screen and (min-width: 1441px) {
+    .container-book {
+        width: 75%;
+    }
+    .book-info div {
+        padding: 10px 0;
+    }
+}
+@media screen and (max-width: 1024px) {
+   .book-inner {
+       flex-direction: column;
+   }
+   .book-content {
+       width: 100%;
+   }
+   .book-img {
+       width: 100%;
+   }
+    .book-content {
+        margin-top: 20px;
+        margin-left: 0;
+        h2 {
+            font-size: 24px;
+            line-height: 32px;
+            margin-top: 10px;
+        }
+    }
+    .book-info div {
+        padding: 5px 0;
+    }
+    // .book-inner {
+    //     flex-direction: column;
+    // }
+}
+@media screen and (max-width: 576px) {
+    .slide-item {
+        height: 440px!important;
+    }
+    .showcase-img-slide {
+        width: 100%;
+        height: 250px;
+        img {
+            height: 100%;
+        }
+    }
+    // .showcase-img-slide img {
+    //     width: 70%;
+    // }
+    .showcase-item-card {
+        display: flex!important;
+        flex-direction: column;
+    }
+    .book-content {
+        width: 100%;
+       
+        h2 {
+            font-size: 24px;
+            line-height: 32px;
+            margin-top: 10px;
+        }
+    }
+    .container-book {
+        width: 90%;
+    }
+    .book-footer {
+        button {
+            padding: 0 70px;
+        }
+    }
+}

@@ -1,0 +1,294 @@
+@import '../../style/_colors';
+@import '../../style/_common';
+
+.about-us--inner {
+    @include flexbox(start);
+    div {
+        width: 50%;
+        color: $black;
+        b {
+            font-size: 26px;
+            line-height: 32px;           
+        }
+    }
+    div.about-img {
+        margin-left: 40px;
+        img {
+            width: 100%;
+            object-fit: contain;
+        }
+    }
+    p {
+        color: $black;
+        margin: 30px 0;
+    }
+}
+.about-us, .count {
+    padding: 40px 0;
+}
+.about h2 {
+    color: $primary;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.count-inner {
+    
+    @include flexbox(space-between, flex-start, row, wrap);
+}
+.count-item {
+    width: calc(33.3% - 20px);
+    margin: 10px;
+    border-left: 2px solid $greyBold;
+    padding-left: 10px;
+    text-align: center;
+    h3 {
+        color: $red;
+    }
+    p {
+
+    }
+}
+.about-library {
+    @include flexbox(start);
+    padding: 20px 0;
+    div {
+        width: 50%;
+    }
+    h3 {
+        color: $primary;
+        margin-bottom: 20px;
+    }
+    p {
+        color: $black;
+    }
+}
+.about-library--img {
+    margin-right: 20px;
+    img {
+        width: 100%;
+    }
+}
+.about-library--text p {
+    margin: 30px 0;
+}
+.more-btn {
+    padding: 10px 30px;
+    background-color: $red;
+    color: $white;
+    border-radius: 2px;
+}
+.review-users {
+    background-image: url('/assets/3.jpg');
+    text-align: center;
+    margin: 70px 0;
+    color: $white;
+    h2, h4 {
+        color: $white;
+    }  
+    padding: 30px 0; 
+}
+.user-reviews {
+    width: 100%;   
+}
+.user-review-item {
+    width: 70%!important;
+    display: flex!important;
+    @include flexbox(center, center, column);
+    p {       
+        width: 100%;
+    }
+    h4 {
+        font-size: 20px;
+    }
+   
+}
+.review-users .slick-slide div{
+    display: flex!important;
+    justify-content: center;
+    align-items: center;
+    margin-right: 0px!important;
+}
+.user-review--img {
+    width: 150px;
+    height: 150px;
+    img {
+        border-radius: 50%;
+        width: 100%;
+        height: 100%;
+    }
+    @include flexbox(center, flex-start);
+}
+.slick-dots li.slick-active button:before {
+    width: 30px;
+    height: 30px;
+    font-size: 12px;
+    color: $white;
+}
+.slick-dots li button:before {
+    color: #e7e7e7;
+    width: 30px;
+    height: 30px;
+    font-size: 12px;
+}
+.join {
+    background-image: url('/assets/4.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    // height: 300px;
+    margin: 20px 0;
+    padding: 100px ;
+    h3 {
+        color: $primary;
+    }
+    p {
+        color: $black;
+    }
+    button {
+        background-color: $red;
+        border: none;
+        &:hover {
+            background-color: $red;
+            opacity: .7;
+        }
+    }
+}
+.review-users .slick-prev {
+    left: 10%;
+    z-index: 9999;
+} 
+.review-users .slick-next:before, .review-users .slick-prev:before {
+    font-size: 30px!important;
+}
+.review-users .slick-next {  
+    right: 10%;
+}
+@media screen and (max-width: 1024px) {
+    .join {
+        padding: 70px 50px;
+        p {
+            width: 50%;
+        }
+    }
+    .about-img {
+        width: 60%!important;
+    }
+    .main-about-text {
+        width: 40%!important;
+    }
+   .user-review-item {
+       p {
+           width: 80%;
+       }
+   }
+    .about-us--inner div b, .about-us--inner p b {
+        font-size: 18px;
+        line-height: 24px;
+    }
+    .about-us--inner p {
+        margin: 10px 0;
+        font-size: 16px;
+    }
+    .about-library--text p {
+        margin: 12px 0;
+        font-size: 16px;
+    }
+    .about-library--text h3 {
+        margin-bottom: 5px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .about-library--text {
+        h3 {
+            margin-bottom: 10px;
+        }
+        a {
+            padding: 5px 15px;
+        }
+       p {
+           font-size: 14px;
+           margin: 10px 0;
+       }
+    }
+    .user-review-item {
+        width: 90%!important;
+        p {
+            width: 90%;
+        }
+    }
+    .about-img {
+        width: 60%!important;
+        margin-left: 20px!important;
+    }
+    .main-about-text {
+        width: 40%!important;
+    }
+    .about-us--inner div b, .about-us--inner p b {
+        font-size: 16px;
+        line-height: 18px;
+    }
+    .about-us--inner p {
+        margin: 8px 0;
+        font-size: 14px;
+        line-height: 18px;
+    }
+    
+    // .main-about-text p {
+    //     font-size: 14px;
+    // }
+    // .about-us--inner p {
+    //     margin: 10px 0;
+    // }
+    .join {
+        padding: 50px 20px;
+        p, h3 {
+            width: 70%;
+        }
+    }
+   
+}
+
+
+@media screen and (max-width: 576px) {
+    .about-us--inner {
+        flex-direction: column;
+    }
+    .user-review-item {
+        width: 100%!important;
+        p {
+            width: 100%;
+        }
+    }
+    .about-us--inner div, .about-us--inner p {
+        width: 100%!important;
+        margin-left: 0!important;
+    }
+    .count-item {
+        width: 100%;
+    }
+    .join {
+        padding: 30px 50px;
+        p {
+            width: 60%;
+        }
+    }
+    .about-library {
+        flex-direction: column;
+    }
+    .about-library div {
+        width: 100%;
+    }
+    .review-users {
+        margin: 20px 0;
+    }
+    .ant-dropdown-link.username-icon {
+        display: flex;
+        align-items: center;
+    }
+}
+
+
+
+
+

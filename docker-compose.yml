@@ -1,0 +1,25 @@
+version: "3.7"
+
+services:
+  client:
+    container_name: client
+    build:
+      context: ./client
+      dockerfile: Dockerfile.prod
+   
+    volumes:
+      - ./front:/app/
+      - /app/node_modules
+    ports:
+      - 5001:80
+    stdin_open: true
+    environment:
+      - "REACT_APP_IP=http://localhost:4300"
+    networks:
+      - app_net
+
+
+networks:
+  app_net:
+    driver: bridge
+    name: app_net

@@ -1,0 +1,33 @@
+@import '../../style/_colors';
+@import '../../style/_common';
+
+.review-item {
+    background-color: #F1F1F1;
+    padding: 20px 45px;
+    margin: 25px 0;
+}
+.rate-text {
+    text-align: center;
+    color: $black;
+}
+.current-rate {
+    color: $red;
+}
+.changing-rate {
+    color: $primary;
+}
+.review-text {
+    text-align: center;
+}
+.review-write {
+    textarea {
+        border: 3px solid #ADADAD;
+    }
+    padding: 20px 0;
+    @include flexbox(center, center, column);
+    button {
+        height: 50px;
+        width: 300px;
+    }
+   
+}

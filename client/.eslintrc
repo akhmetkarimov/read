@@ -1,0 +1,48 @@
+{
+  "env": {
+    "browser": true,
+    "es6": true,
+    "jest": true
+  },
+  "plugins": [
+    "babel",
+    "react"
+  ],
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended"
+  ],
+  "globals": {
+    "window": true,
+    "define": true,
+    "require": true,
+    "module": true
+  },
+  "parserOptions": {
+    "ecmaFeatures": {
+      "experimentalObjectRestSpread": true,
+      "jsx": true,
+      "es6": true
+    },
+    "sourceType": "module"
+  },
+  "rules": {
+    "indent": ["error", 4],
+    "linebreak-style": [ "error", "unix" ],
+    "quotes": [ "error", "backtick" ],
+    "semi": [ "error", "always"],
+    "no-comma-dangle": 0,
+    "eqeqeq": 0,
+    "no-trailing-spaces": 2,
+    "no-irregular-whitespace": "error",
+    "no-multi-spaces": "error",
+    "brace-style": ["error", "1tbs"],
+    "no-var": "error",
+    "max-len": [
+      2,
+      120
+    ],
+    "react/prefer-stateless-function": [0, { "ignorePureComponents": true }],
+    "react/jsx-filename-extension": [1, { "extensions":  [".js", ".jsx"] }]
+  }
+}

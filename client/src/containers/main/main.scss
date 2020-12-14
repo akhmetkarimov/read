@@ -1,0 +1,54 @@
+
+@import '../../style/_colors';
+@import '../../style/_common';
+
+.main-inner {
+    display: flex;
+    margin: 50px 0;
+}
+.main-category {
+    width: 25%;
+}
+.main-showcase {
+    width: 85%;
+    margin-left: 30px;
+}
+.breadcrumb-main {
+    padding: 20px 0;
+    p, span {
+        color: $black;
+    }
+}
+@media screen and (max-width: 1024px) {
+    .main-category {
+        width: 30%;
+    }
+    .main-showcase {
+        width: 70%;
+    }
+   
+}
+
+@media screen and (max-width: 768px) {
+    .main-category {
+        width: 35%;
+    }
+    .main-showcase {
+        width: 65%;
+    }
+    .main-showcase {
+        margin-left: 20px;
+    }
+}
+@media screen and (max-width: 576px) {
+    .main-category {
+        display: none;
+    }
+    .main-showcase {
+        width: 100%;
+        margin-left: 0;
+    }
+    .main-inner {
+        margin: 20px 0;
+    }
+}
